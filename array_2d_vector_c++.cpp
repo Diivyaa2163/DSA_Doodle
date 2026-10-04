@@ -37,31 +37,34 @@
 
 
 // // 2D ARRAY TRAVERSAL IN C++
-// #include <iostream>
-// #include <algorithm>
-// #include <climits>
-// #include <array>
-// #include <vector>
-// using namespace std;
+#include <iostream>
+#include <algorithm>
+#include <climits>
+#include <array>
+#include <vector>
+using namespace std;
 
-// int main () {
-//     int matrix [4] [3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {10, 11, 12}};
-//     int rows = 4;
-//     int columns = 3;
+int main () {
+    int matrix [4] [3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {10, 11, 12}};
+    int rows = 4;
+    int columns = 3;
 
-//     // Traversing 2D Array usinG Nested Loops
-//     // FOR LOOP (NESTED)
-//     for (int i = 0; i < rows; i++) {
-//         cout << " [";
-//         for (int j = 0; j < columns; j++) {
-//             cout << matrix[i][j] << " ";
-//         }
-//         cout << "]" << endl;
-//         cout << endl;
-//     }
+    // Traversing 2D Array usinG Nested Loops
+    // FOR LOOP (NESTED)
+    for (int i = 0; i < rows; i++) {
+        cout << " [";
+        for (int j = 0; j < columns; j++) {
+            cout << " " << matrix[i][j];
+            
+            // Print the indices of the current element
+            cout << "(" << i << "," << j << ") ";
+        }
+        cout << "]" << endl;
+        cout << endl;
+    }
 
-//     return 0;
-// }
+    return 0;
+}
 
 
 
@@ -267,25 +270,27 @@
 
 
 // LOOPS IN 2D VECTORS IN C++
-#include <iostream>
-#include <algorithm>
-#include <climits>
-#include <array>
-#include <vector>
-using namespace std;
+// #include <iostream>
+// #include <algorithm>
+// #include <climits>
+// #include <array>
+// #include <vector>
+// using namespace std;
 
-int main() {
-    vector<vector<int>> mat = {{1, 2, 3}, {4, 5, 6, 7, 8, 9}, {10, 11, 12}};
+// int main() {
+//     vector<vector<int>> mat = {{1, 2, 3}, {4, 5, 6, 7, 8, 9}, {10, 11, 12}};
 
-    cout << "Elements of 2D vector using range-based for loop: " << endl;
+//     for (int i = 0; i < mat.size(); i++) {
+//         cout << "[ ";
 
-    for (int i = 0; i < mat.size(); i++) {
-        cout << "[";
-        for (int j = 0; j < mat[i].size(); j++) {
-            cout << mat[i][j] << " ";
-        }
-        cout << ']';
-        cout << endl;
-    }
-    return 0;
-}
+//         for (int j = 0; j < mat[i].size(); j++) {
+//             cout << mat[i][j] << " ";
+//             cout << '(' << i << "," << j << ") ";  // Print the indices of the current element
+//         }
+
+//         cout << "]";
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
